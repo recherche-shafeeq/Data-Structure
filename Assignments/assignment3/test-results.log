@@ -1,0 +1,1738 @@
+============================================================== test session starts ==============================================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py FFFFFFFF                                                                                                                  [100%]
+
+=================================================================== FAILURES ====================================================================
+_________________________________________________________________ test_s_len_1 __________________________________________________________________
+
+    def test_s_len_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+>       assert l.len() == 2
+E       AttributeError: 'LinkedList' object has no attribute 'len'
+
+test_student.py:9: AttributeError
+_________________________________________________________________ test_s_len_2 __________________________________________________________________
+
+    def test_s_len_2():
+        l = LinkedList()
+>       assert l.len() == 0
+E       AttributeError: 'LinkedList' object has no attribute 'len'
+
+test_student.py:13: AttributeError
+_________________________________________________________________ test_s_len_3 __________________________________________________________________
+
+    def test_s_len_3():
+        l = LinkedList()
+        l.push(5)
+        l.push(2)
+>       l.pop()
+
+test_student.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x112842860>
+
+    def pop(self):
+        if self.head is None:
+>           raise Exception("Can't Pop.Nothing to pop")
+E           Exception: Can't Pop.Nothing to pop
+
+a03.py:27: Exception
+________________________________________________________________ test_s_remove_1 ________________________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x112827390>' == '[6]'
+E         - <a03.LinkedList object at 0x112827390>
+E         + [6]
+
+test_student.py:30: AssertionError
+________________________________________________________________ test_s_remove_2 ________________________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x112840be0>' == '[5, 6]'
+E         - <a03.LinkedList object at 0x112840be0>
+E         + [5, 6]
+
+test_student.py:51: AssertionError
+_________________________________________________________________ test_s_get_1 __________________________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+E       AttributeError: 'LinkedList' object has no attribute 'get'
+
+test_student.py:59: AttributeError
+_________________________________________________________________ test_s_get_2 __________________________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+E       AttributeError: 'LinkedList' object has no attribute 'get'
+
+test_student.py:67: AttributeError
+_________________________________________________________________ test_s_get_3 __________________________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       l.pop()
+
+test_student.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1128728d0>
+
+    def pop(self):
+        if self.head is None:
+>           raise Exception("Can't Pop.Nothing to pop")
+E           Exception: Can't Pop.Nothing to pop
+
+a03.py:27: Exception
+=========================================================== 8 failed in 0.15 seconds ============================================================
+============================================================== test session starts ==============================================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py F.FFFFFF                                                                                                                  [100%]
+
+=================================================================== FAILURES ====================================================================
+_________________________________________________________________ test_s_len_1 __________________________________________________________________
+
+    def test_s_len_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+>       assert l.len() == 2
+E       assert 0 == 2
+E        +  where 0 = <bound method len of <a03.LinkedList object at 0x1110f3ac8>>()
+E        +    where <bound method len of <a03.LinkedList object at 0x1110f3ac8>> = <a03.LinkedList object at 0x1110f3ac8>.len
+
+test_student.py:9: AssertionError
+_________________________________________________________________ test_s_len_3 __________________________________________________________________
+
+    def test_s_len_3():
+        l = LinkedList()
+        l.push(5)
+        l.push(2)
+>       l.pop()
+
+test_student.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x111157400>
+
+    def pop(self):
+        if self.head is None:
+>           raise Exception("Can't Pop.Nothing to pop")
+E           Exception: Can't Pop.Nothing to pop
+
+a03.py:27: Exception
+________________________________________________________________ test_s_remove_1 ________________________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x1110f3a90>' == '[6]'
+E         - <a03.LinkedList object at 0x1110f3a90>
+E         + [6]
+
+test_student.py:30: AssertionError
+________________________________________________________________ test_s_remove_2 ________________________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x11115aef0>' == '[5, 6]'
+E         - <a03.LinkedList object at 0x11115aef0>
+E         + [5, 6]
+
+test_student.py:51: AssertionError
+_________________________________________________________________ test_s_get_1 __________________________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11116c518>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:92: NameError
+_________________________________________________________________ test_s_get_2 __________________________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1110f3978>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:92: NameError
+_________________________________________________________________ test_s_get_3 __________________________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       l.pop()
+
+test_student.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11117a470>
+
+    def pop(self):
+        if self.head is None:
+>           raise Exception("Can't Pop.Nothing to pop")
+E           Exception: Can't Pop.Nothing to pop
+
+a03.py:27: Exception
+====================================================== 7 failed, 1 passed in 0.12 seconds =======================================================
+============================================================== test session starts ==============================================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ..FFFFFF                                                                                                                  [100%]
+
+=================================================================== FAILURES ====================================================================
+_________________________________________________________________ test_s_len_3 __________________________________________________________________
+
+    def test_s_len_3():
+        l = LinkedList()
+        l.push(5)
+        l.push(2)
+>       l.pop()
+
+test_student.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11988bac8>
+
+    def pop(self):
+        if self.head is None:
+            raise Exception("Can't Pop.Nothing to pop")
+        if self.head.next is None:
+            val = self.head.val
+            self.head = None
+            return val
+        last = self.head
+        while last is not None:
+            self.prev = last
+            last = last.next
+>       self.prev.next = new_node
+E       NameError: name 'new_node' is not defined
+
+a03.py:36: NameError
+________________________________________________________________ test_s_remove_1 ________________________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x1198aa470>' == '[6]'
+E         - <a03.LinkedList object at 0x1198aa470>
+E         + [6]
+
+test_student.py:30: AssertionError
+________________________________________________________________ test_s_remove_2 ________________________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x11988bd30>' == '[5, 6]'
+E         - <a03.LinkedList object at 0x11988bd30>
+E         + [5, 6]
+
+test_student.py:51: AssertionError
+_________________________________________________________________ test_s_get_1 __________________________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1198fb400>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:92: NameError
+_________________________________________________________________ test_s_get_2 __________________________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11990c080>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:92: NameError
+_________________________________________________________________ test_s_get_3 __________________________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       l.pop()
+
+test_student.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11988bb00>
+
+    def pop(self):
+        if self.head is None:
+            raise Exception("Can't Pop.Nothing to pop")
+        if self.head.next is None:
+            val = self.head.val
+            self.head = None
+            return val
+        last = self.head
+        while last is not None:
+            self.prev = last
+            last = last.next
+>       self.prev.next = new_node
+E       NameError: name 'new_node' is not defined
+
+a03.py:36: NameError
+====================================================== 6 failed, 2 passed in 0.16 seconds =======================================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ..FFFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+__________________________________________________ test_s_len_3 ___________________________________________________
+
+    def test_s_len_3():
+        l = LinkedList()
+        l.push(5)
+        l.push(2)
+>       l.pop()
+
+test_student.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10c9e18d0>
+
+    def pop(self):
+        if self.head is None:
+            raise Exception("Can't Pop.Nothing to pop")
+        if self.head.next is None:
+            val = self.head.val
+            self.head = None
+            return val
+        last = self.head
+        while last is not None:
+            self.prev = last
+            last = last.next
+>       val = temp.val
+E       NameError: name 'temp' is not defined
+
+a03.py:36: NameError
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x11910c400>' == '[6]'
+E         - <a03.LinkedList object at 0x11910c400>
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x10c9e1da0>' == '[5, 6]'
+E         - <a03.LinkedList object at 0x10c9e1da0>
+E         + [5, 6]
+
+test_student.py:51: AssertionError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x119112358>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:93: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10c9e1e10>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:93: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       l.pop()
+
+test_student.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x119112a90>
+
+    def pop(self):
+        if self.head is None:
+            raise Exception("Can't Pop.Nothing to pop")
+        if self.head.next is None:
+            val = self.head.val
+            self.head = None
+            return val
+        last = self.head
+        while last is not None:
+            self.prev = last
+            last = last.next
+>       val = temp.val
+E       NameError: name 'temp' is not defined
+
+a03.py:36: NameError
+======================================= 6 failed, 2 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ..FFFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+__________________________________________________ test_s_len_3 ___________________________________________________
+
+    def test_s_len_3():
+        l = LinkedList()
+        l.push(5)
+        l.push(2)
+>       l.pop()
+
+test_student.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10c411b70>
+
+    def pop(self):
+        if self.head is None:
+            raise Exception("Can't Pop.Nothing to pop")
+        if self.head.next is None:
+            val = self.head.val
+            self.head = None
+            return val
+        last = self.head
+        while last is not None:
+            self.prev = last
+            last = last.next
+>       val = last.val
+E       AttributeError: 'NoneType' object has no attribute 'val'
+
+a03.py:36: AttributeError
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x10c430390>' == '[6]'
+E         - <a03.LinkedList object at 0x10c430390>
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x10c466c50>' == '[5, 6]'
+E         - <a03.LinkedList object at 0x10c466c50>
+E         + [5, 6]
+
+test_student.py:51: AssertionError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10c481390>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:93: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10c430080>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:93: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       l.pop()
+
+test_student.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10c4812b0>
+
+    def pop(self):
+        if self.head is None:
+            raise Exception("Can't Pop.Nothing to pop")
+        if self.head.next is None:
+            val = self.head.val
+            self.head = None
+            return val
+        last = self.head
+        while last is not None:
+            self.prev = last
+            last = last.next
+>       val = last.val
+E       AttributeError: 'NoneType' object has no attribute 'val'
+
+a03.py:36: AttributeError
+======================================= 6 failed, 2 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x115354cf8>' == '[6]'
+E         - <a03.LinkedList object at 0x115354cf8>
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x11537b438>' == '[5, 6]'
+E         - <a03.LinkedList object at 0x11537b438>
+E         + [5, 6]
+
+test_student.py:51: AssertionError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1153ad1d0>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:96: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1153cf2e8>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:96: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1153ad7f0>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:96: NameError
+======================================= 5 failed, 3 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '<a03.LinkedL... 0x116e91b38>' == '[6]'
+E         - <a03.LinkedList object at 0x116e91b38>
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+>       l.remove(19)
+
+test_student.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x116eb8320>, val = 19
+
+    def remove(self, val):
+        temp = self.head
+    
+        if temp is not None:
+            if temp.val == val:
+                self.head = temp.next
+                temp = None
+                return
+    
+        while temp is not None:
+            if temp.val == val:
+                break
+    
+            prev = temp
+            temp = temp.next
+    
+>       prev.next = temp.next
+E       AttributeError: 'NoneType' object has no attribute 'next'
+
+a03.py:85: AttributeError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x116f0f358>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:100: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x116f083c8>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:100: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x116eb8940>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:100: NameError
+======================================= 5 failed, 3 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5]' == '[6]'
+E         - [5]
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+>       l.remove(19)
+
+test_student.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x112a22438>, val = 19
+
+    def remove(self, val):
+        temp = self.head
+    
+        if temp is not None:
+            if temp.val == val:
+                self.head = temp.next
+                temp = None
+                return
+    
+        while temp is not None:
+            if temp.val == val:
+                break
+    
+            prev = temp
+            temp = temp.next
+    
+>       prev.next = temp.next
+E       AttributeError: 'NoneType' object has no attribute 'next'
+
+a03.py:93: AttributeError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x112a5a438>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:108: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x112a531d0>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:108: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x112a5aac8>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:108: NameError
+======================================= 5 failed, 3 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5]' == '[6]'
+E         - [5]
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+>       l.remove(19)
+
+test_student.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10f5203c8>, val = 19
+
+    def remove(self, val):
+        temp = self.head
+    
+        if temp is not None:
+            if temp.val == val:
+                self.head = temp.next
+                temp = None
+                return
+    
+        while temp is not None:
+            if temp.val == val:
+                break
+    
+            prev = temp
+            temp = temp.next
+    
+>       prev.next = temp.next
+E       AttributeError: 'NoneType' object has no attribute 'next'
+
+a03.py:93: AttributeError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10f5533c8>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:108: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10f552390>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:108: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10f553a58>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:108: NameError
+======================================= 5 failed, 3 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5]' == '[6]'
+E         - [5]
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5, 5]' == '[5, 6]'
+E         - [5, 5]
+E         ?     ^
+E         + [5, 6]
+E         ?     ^
+
+test_student.py:51: AssertionError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x109b5e9e8>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:109: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x109bd9358>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:109: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x109c142b0>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:109: NameError
+======================================= 5 failed, 3 passed in 0.12 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5]' == '[6]'
+E         - [5]
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5, 5]' == '[5, 6]'
+E         - [5, 5]
+E         ?     ^
+E         + [5, 6]
+E         ?     ^
+
+test_student.py:51: AssertionError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10ec21198>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10ebf0390>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10ec34438>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+======================================= 5 failed, 3 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5]' == '[6]'
+E         - [5]
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5, 5]' == '[5, 6]'
+E         - [5, 5]
+E         ?     ^
+E         + [5, 6]
+E         ?     ^
+
+test_student.py:51: AssertionError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x114593da0>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1145f83c8>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x1145ea240>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+======================================= 5 failed, 3 passed in 0.11 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 0 items / 1 errors
+
+===================================================== ERRORS ======================================================
+________________________________________ ERROR collecting test_student.py _________________________________________
+//anaconda3/lib/python3.7/site-packages/_pytest/python.py:498: in _importtestmodule
+    mod = self.fspath.pyimport(ensuresyspath=importmode)
+//anaconda3/lib/python3.7/site-packages/py/_path/local.py:701: in pyimport
+    __import__(modname)
+<frozen importlib._bootstrap>:983: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:967: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:677: in _load_unlocked
+    ???
+//anaconda3/lib/python3.7/site-packages/_pytest/assertion/rewrite.py:149: in exec_module
+    exec(co, module.__dict__)
+test_student.py:1: in <module>
+    from a03 import LinkedList
+E     File "/Users/shafiq/Desktop/Data_Structures/assignment/assignment3/a03.py", line 1
+E       class Node:
+E       ^
+E   IndentationError: unexpected indent
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================= 1 error in 0.21 seconds =============================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ...FFFFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+_________________________________________________ test_s_remove_1 _________________________________________________
+
+    def test_s_remove_1():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(5)
+        m = '[6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5]' == '[6]'
+E         - [5]
+E         + [6]
+
+test_student.py:30: AssertionError
+_________________________________________________ test_s_remove_2 _________________________________________________
+
+    def test_s_remove_2():
+        l = LinkedList()
+        l.push(5)
+        l.push(6)
+    
+        l.remove(19)
+        m = '[5, 6]'
+>       assert str(l).strip() == m
+E       AssertionError: assert '[5, 5]' == '[5, 6]'
+E         - [5, 5]
+E         ?     ^
+E         + [5, 6]
+E         ?     ^
+
+test_student.py:51: AssertionError
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10cae4198>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10cab29b0>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10cae1160>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+======================================= 5 failed, 3 passed in 0.12 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py .....FFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10cc26eb8>, index = 0
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10cc48320>, index = 1
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x10cc7cc50>, index = 2
+
+    def get(self,index):
+>       if index >= length():
+E       NameError: name 'length' is not defined
+
+a03.py:110: NameError
+======================================= 3 failed, 5 passed in 0.10 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py .....FFF                                                                                    [100%]
+
+==================================================== FAILURES =====================================================
+__________________________________________________ test_s_get_1 ___________________________________________________
+
+    def test_s_get_1():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(0) == 10
+
+test_student.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11125de48>, index = 0
+
+    def get(self,index):
+>       if index >= len():
+E       TypeError: len() missing 1 required positional argument: 'self'
+
+a03.py:110: TypeError
+__________________________________________________ test_s_get_2 ___________________________________________________
+
+    def test_s_get_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+>       assert l.get(1) == 11
+
+test_student.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11127f2b0>, index = 1
+
+    def get(self,index):
+>       if index >= len():
+E       TypeError: len() missing 1 required positional argument: 'self'
+
+a03.py:110: TypeError
+__________________________________________________ test_s_get_3 ___________________________________________________
+
+    def test_s_get_3():
+        l = LinkedList()
+        l.push(10)
+        l.push(11)
+        l.push(12)
+        l.pop()
+        try:
+>           l.get(2)
+
+test_student.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <a03.LinkedList object at 0x11125de48>, index = 2
+
+    def get(self,index):
+>       if index >= len():
+E       TypeError: len() missing 1 required positional argument: 'self'
+
+a03.py:110: TypeError
+======================================= 3 failed, 5 passed in 0.13 seconds ========================================
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/assignment/assignment3
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 8 items
+
+test_student.py ........                                                                                    [100%]
+
+============================================ 8 passed in 0.03 seconds =============================================
