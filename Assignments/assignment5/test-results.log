@@ -1,0 +1,168 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/Practice/Data-Structures/Assignments/assignment5
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 5 items
+
+test_student.py .FFFF                                                    [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_s_rev_1 _________________________________
+
+    def test_s_rev_1():
+        l = LinkedList()
+        l.push(1)
+        l.push(2)
+        l.push(3)
+>       l.reverse_list()
+E       AttributeError: 'LinkedList' object has no attribute 'reverse_list'
+
+test_student.py:19: AttributeError
+_________________________________ test_s_rev_2 _________________________________
+
+    def test_s_rev_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(20)
+>       l.reverse_list()
+E       AttributeError: 'LinkedList' object has no attribute 'reverse_list'
+
+test_student.py:29: AttributeError
+_________________________________ test_s_rev_3 _________________________________
+
+    def test_s_rev_3():
+        l = LinkedList()
+>       l.reverse_list()
+E       AttributeError: 'LinkedList' object has no attribute 'reverse_list'
+
+test_student.py:36: AttributeError
+_________________________________ test_s_rev_4 _________________________________
+
+    def test_s_rev_4():
+        l = LinkedList()
+        l.push(4)
+>       l.reverse_list()
+E       AttributeError: 'LinkedList' object has no attribute 'reverse_list'
+
+test_student.py:44: AttributeError
+====================== 4 failed, 1 passed in 0.13 seconds ======================
+============================= test session starts ==============================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/Practice/Data-Structures/Assignments/assignment5
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 5 items
+
+test_student.py .FFF.                                                    [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_s_rev_1 _________________________________
+
+    def test_s_rev_1():
+        l = LinkedList()
+        l.push(1)
+        l.push(2)
+        l.push(3)
+        l.reverse_list()
+    
+        m = '[3,2,1]'
+>       assert "".join(str(l).split()) == m
+E       AssertionError: assert '[1]' == '[3,2,1]'
+E         - [1]
+E         + [3,2,1]
+
+test_student.py:22: AssertionError
+_________________________________ test_s_rev_2 _________________________________
+
+    def test_s_rev_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(20)
+        l.reverse_list()
+    
+        m = '[20,10]'
+>       assert "".join(str(l).split()) == m
+E       AssertionError: assert '[10]' == '[20,10]'
+E         - [10]
+E         + [20,10]
+
+test_student.py:32: AssertionError
+_________________________________ test_s_rev_3 _________________________________
+
+    def test_s_rev_3():
+        l = LinkedList()
+>       l.reverse_list()
+
+test_student.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <a05.LinkedList object at 0x119653ac8>
+
+    def reverse_list(self):
+        prev = self.head
+>       nxt = prev.next
+E       AttributeError: 'NoneType' object has no attribute 'next'
+
+a05.py:141: AttributeError
+====================== 3 failed, 2 passed in 0.09 seconds ======================
+============================= test session starts ==============================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/Practice/Data-Structures/Assignments/assignment5
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 5 items
+
+test_student.py .FF..                                                    [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_s_rev_1 _________________________________
+
+    def test_s_rev_1():
+        l = LinkedList()
+        l.push(1)
+        l.push(2)
+        l.push(3)
+        l.reverse_list()
+    
+        m = '[3,2,1]'
+>       assert "".join(str(l).split()) == m
+E       AssertionError: assert '[1]' == '[3,2,1]'
+E         - [1]
+E         + [3,2,1]
+
+test_student.py:22: AssertionError
+_________________________________ test_s_rev_2 _________________________________
+
+    def test_s_rev_2():
+        l = LinkedList()
+        l.push(10)
+        l.push(20)
+        l.reverse_list()
+    
+        m = '[20,10]'
+>       assert "".join(str(l).split()) == m
+E       AssertionError: assert '[10]' == '[20,10]'
+E         - [10]
+E         + [20,10]
+
+test_student.py:32: AssertionError
+====================== 2 failed, 3 passed in 0.10 seconds ======================
+============================= test session starts ==============================
+platform darwin -- Python 3.7.3, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/shafiq/Desktop/Data_Structures/Practice/Data-Structures/Assignments/assignment5
+plugins: openfiles-0.3.2, arraydiff-0.3, timeout-1.3.3, doctestplus-0.3.0, remotedata-0.3.1
+timeout: 3.0s
+timeout method: signal
+timeout func_only: False
+collected 5 items
+
+test_student.py .....                                                    [100%]
+
+=========================== 5 passed in 0.04 seconds ===========================
